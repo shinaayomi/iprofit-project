@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 px-0 dashboard-side">
+                    <!-- Dashboard Side -->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light flex-md-column pt-md-3 pb-md-5 pr-md-0 pl-md-2">
+                        <a class="navbar-brand" href="#"><img src="/icon/Logo.svg" class="img-fluid" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
+                            <ul class="navbar-nav flex-column pl-5 pl-md-0 py-5">
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" href="#"><img src="/icon/dashboard.svg" class="img-fluid mr-3" alt="">Dashboard</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" data-toggle="collapse" href="#getStarted" role="button" aria-expanded="false" aria-controls="getStarted"><img src="/icon/get-started.svg" class="img-fluid mr-3" alt="">Get Started<img src="/icon/right-nav.svg" id="startedImg" class="img-fluid ml-3" alt=""></a>
+                                </li>
+                                <!-- Sub List Get Started -->
+                                <div class="collapse multi-collapse" id="getStarted">
+                                    <ul class="nav flex-column get-started-ul pl-md-2 pl-4">
+                                        <li class="nav-item get-started-li px-2 ml-3">
+                                            <a href="#" class="nav-link">Account Setup</a>
+                                        </li>
+                                        <li class="nav-item get-started-li px-2 ml-3">
+                                            <a href="#" class="nav-link">Training</a>
+                                        </li>
+                                        <li class="nav-item get-started-li px-2 ml-3">
+                                            <a href="#" class="nav-link">My Purchases</a>
+                                        </li>
+                                        <li class="nav-item get-started-li px-2 ml-3">
+                                            <a href="#" class="nav-link">Bonuses</a>
+                                        </li>
+                                        <li class="nav-item get-started-li px-2 ml-3">
+                                            <a href="#" class="nav-link">Support</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- #### -->
+                                <li class="nav-item px-2">
+                                    <a class="nav-link multi-list" data-toggle="collapse" href="#campaigns" role="button" aria-expanded="false" aria-controls="campaigns"><img src="/icon/campaign.svg" class="img-fluid mr-3" alt="">Campaigns<img src="/icon/right-nav.svg" id="campaignImg" class="img-fluid ml-3" alt=""></a>
+                                </li>
+                                <!-- Campaign Listd  -->
+                                <div class="collapse multi-collapse" id="campaigns">
+                                    <ul class="nav flex-column pl-2">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><img src="/icon/cross.svg" class="img-fluid mr-2" width="11" alt="">Create New One</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><img src="/icon/menu.svg" class="img-fluid mr-2" width="11" alt="">View Campaigns</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- ### -->
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" href="#"><img src="/icon/dfy.svg" class="img-fluid mr-3" alt="">DYF Products</a>
+                                </li>
+                                <!-- Sales Report -->
+                                <li class="nav-item px-2">
+                                    <a class="nav-link multi-list" data-toggle="collapse" href="#sales" role="button" aria-expanded="false" aria-controls="sales"><img src="/icon/sales-report.svg" class="img-fluid mr-3" alt="">Sales Report<img src="/icon/right-nav.svg" class="img-fluid ml-2" alt=""></a>
+                                </li>
+                                <div class="collapse" id="sales">
+                                    <ul class="nav flex-column pl-4">
+                                        <li class="nav-item px-3">
+                                            <a href="#" class="nav-link">Overview</a>
+                                        </li>
+                                        <li class="nav-item px-3">
+                                            <a href="#" class="nav-link">Orders</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- #### -->
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" href="#"><img src="/icon/integration.svg" class="img-fluid mr-3" alt="">Integration</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" href="#"><img src="/icon/settings.svg" class="img-fluid mr-3" alt="">Settings</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex justify-content-end w-100">
+                                <img src="/icon/forwarding-nav.svg" class="img-fluid py-5">
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Dashboard Body-->
+                <div class="col-md-10 dashboard-body px-md-0">
+                    <!-- Body Nav -->
+                    <nav class="nav pt-md-4 dashboard-body-nav">
+                        <a href="#" class="nav-link px-0 px-md-4 greenText d-flex order-md-1 order-2">
+                            <h3 class="mb-0">Order Statistics</h3>
+                        </a>
+                        <ul class="nav ml-auto px-md-4 order-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="/icon/search.svg" class="img-fluid" width="18"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link purpleText px-0" href="#">Welcome Victor Ukim <img src="/icon/profile-pic.svg" class="img-fluid ml-2" width="18"></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Order Statistics Contents -->
+                    <div class="px-md-4 py-4 orders">
+
+                        <!-- Order Statistics -->
+                        <div class="order-statistics p-4 mb-5 border border-success">
+                            <div class="d-flex">
+                                <h6 class="font-weight-bold mr-3">ORDERS STATISTICS</h6>
+                                <select name="" id="">
+                                    <option value="10"></option>
+                                    <option value="10">9</option>
+                                    <option value="10">8</option>
+                                    <option value="10">7</option>
+                                    <option value="10">6</option>
+                                </select>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="stat-table my-5">
+                                <table class="w-100 purpleBorder bordered-tables">
+                                    <tr>
+                                        <th>Order No</th>
+                                        <th>Customer’s Name</th>
+                                        <th>Products</th>
+                                        <th>Amount</th>
+                                        <th>Quantity</th>
+                                        <th>Payment Method</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td>00143579790</td>
+                                        <td>Regina Okoli</td>
+                                        <td>Silicone Case For Iphone</td>
+                                        <td>#250</td>
+                                        <td>1</td>
+                                        <td>PayPal</td>
+                                        <td>Awaiting Payment</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Babatunde Jones</td>
+                                        <td>Chanderlier</td>
+                                        <td>#150,000</td>
+                                        <td>1</td>
+                                        <td>Stripe</td>
+                                        <td>Shipped</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Kanye North</td>
+                                        <td>Pino Polaroid Camera</td>
+                                        <td>#30,000</td>
+                                        <td>2</td>
+                                        <td>PayPal</td>
+                                        <td>Paid</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Kanye North</td>
+                                        <td>Pino Polaroid Camera</td>
+                                        <td>#30,000</td>
+                                        <td>2</td>
+                                        <td>PayPal</td>
+                                        <td>Delivered</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Regina Okoli</td>
+                                        <td>Silicone Case For Iphone</td>
+                                        <td>#250</td>
+                                        <td>1</td>
+                                        <td>PayPal</td>
+                                        <td>Awaiting Payment</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Kanye North</td>
+                                        <td>Pino Polaroid Camera</td>
+                                        <td>#30,000</td>
+                                        <td>2</td>
+                                        <td>PayPal</td>
+                                        <td>Shipped</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Regina Okoli</td>
+                                        <td>Silicone Case For Iphone</td>
+                                        <td>#250</td>
+                                        <td>1</td>
+                                        <td>PayPal</td>
+                                        <td>Awaiting Payment</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Kanye North</td>
+                                        <td>Pino Polaroid Camera</td>
+                                        <td>#30,000</td>
+                                        <td>2</td>
+                                        <td>PayPal</td>
+                                        <td>Delivered</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Regina Okoli</td>
+                                        <td>Silicone Case For Iphone</td>
+                                        <td>#250</td>
+                                        <td>1</td>
+                                        <td>PayPal</td>
+                                        <td>Awaiting Payment</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>00163779090</td>
+                                        <td>Kanye North</td>
+                                        <td>Pino Polaroid Camera</td>
+                                        <td>#30,000</td>
+                                        <td>2</td>
+                                        <td>PayPal</td>
+                                        <td>Shipped</td>
+                                        <td><button class="btn">Details</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md text-center text-md-left">
+                                    Showing 1 to 2 of 2 entries
+                                </div>
+                                <div class="col-md text-center text-md-right">
+                                    <a href="#" class="purpleBtn pageNum">Prev</a>
+                                    <a href="#" class="numBtn pageNum">1</a>
+                                    <a href="#" class="darkBtn pageNum">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+
+
+
+</body>
+
+</html>
